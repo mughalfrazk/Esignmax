@@ -1,0 +1,850 @@
+<html lang="en">
+
+
+
+<head>
+
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Esignmax</title>
+
+    <!-- plugins:css -->
+
+    <link rel="stylesheet" href="./assets/vendors/mdi/css/materialdesignicons.min.css">
+
+    <link rel="stylesheet" href="./assets/vendors/css/vendor.bundle.base.css">
+
+
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/sweetalert.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+
+    <!-- End layout styles -->
+
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+
+</head>
+
+
+
+<body>
+
+    <div class="container-scroller">
+
+        <!-- partial:partials/_navbar.html -->
+
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a href="#home" class="pageTitle"><img class="logoicon mr-3" src="./assets/images/logo.png" style="width: 140px;"></a>
+                <span style="cursor: pointer; color: white; font-size: 22px;"
+                    onclick="openNav()">&#9776;</span>
+    
+            </div>
+
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+
+                <div class="search-field d-none d-md-block">
+
+                </div>
+
+                <ul class="navbar-nav navbar-nav-right">
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="mdi mdi-email-outline"></i> <span class="count-symbol bg-warning"></span> </a>
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+
+                            <h6 class="p-3 mb-0">Messages</h6>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail"> <img src="./assets/images/faces/face4.jpg" alt="image" class="profile-pic"> </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+
+                                    <p class="text-white mb-0"> 1 Minutes ago </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail"> <img src="./assets/images/faces/face2.jpg" alt="image" class="profile-pic"> </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+
+                                    <p class="text-white mb-0"> 15 Minutes ago </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail"> <img src="./assets/images/faces/face3.jpg" alt="image" class="profile-pic"> </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+
+                                    <p class="text-white mb-0"> 18 Minutes ago </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown"> <i class="mdi mdi-bell-outline"></i> <span class="count-symbol bg-danger"></span> </a>
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+
+                            <h6 class="p-3 mb-0">Notifications</h6>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-success"> <i class="mdi mdi-calendar"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+
+                                    <p class="text-white ellipsis mb-0"> Just a reminder that you have an event today </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-warning"> <i class="mdi mdi-settings"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+
+                                    <p class="text-white ellipsis mb-0"> Update dashboard </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-info"> <i class="mdi mdi-link-variant"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+
+                                    <p class="text-white ellipsis mb-0"> New admin wow! </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link count-indicator dropdown-toggle" id="documentDropdown" href="#" data-toggle="dropdown"> <i class="mdi mdi-file-outline"></i> <span class="count-symbol bg-info"></span> </a>
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="documentDropdown">
+
+                            <h6 class="p-3 mb-0">Documents</h6>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item" data-toggle="modal" data-target="#NewDoc">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-primary"> <i class="mdi mdi-file"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">Create</h6>
+
+                                    <p class="text-white ellipsis mb-0"> To create a new document. </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-info"> <i class="mdi mdi-file-word"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">Upload</h6>
+
+                                    <p class="text-white ellipsis mb-0"> Upload Microsoft Word file. </p>
+
+                                </div>
+
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item preview-item" href="/emax/Views/document">
+
+                                <div class="preview-thumbnail">
+
+                                    <div class="preview-icon bg-success"> <i class="mdi mdi-file-document"></i> </div>
+
+                                </div>
+
+                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+
+                                    <h6 class="preview-subject font-weight-normal mb-1">View</h6>
+
+                                    <p class="text-white ellipsis mb-0"> See all saved documents. </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item nav-profile dropdown">
+
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+
+                            <div class="nav-profile-img">
+
+                                <img src="http://www.110estudio.com/emax/app-assets/images/profile-photos/image_20170412_112801_42-259x300.jpg_copy0." alt="image">
+
+                                <span class="availability-status online"></span>
+
+                            </div>
+
+                            <div class="nav-profile-text">
+
+                                <p class="mb-1">Syed Zahid Kazmi</p>
+
+                            </div>
+
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+
+                            <a class="dropdown-item" href="./profile.html">
+
+                                <i class="mdi mdi-account-outline mr-2"></i> My Profile </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="./settings.html">
+
+                                <i class="mdi mdi-wrench mr-2"></i> Setting </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="/emax/Views/logout">
+
+                                <i class="mdi mdi-logout mr-2"></i> Logout </a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+          </button>
+
+            </div>
+
+        </nav>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="./dashboard.html" style="font-weight: normal;"><img class="logoicon px-1 py-1" src="./assets/images/logo-mini.jpg" style="width: 27px; background-color: #92d14f; border-radius: 2px;"> esignmax</a>
+            <a href="./dashboard.html"><i class="mdi mdi-home"></i> Dashboard</a>
+            <a href="./document.html"><i class="mdi mdi-file"></i> Document</a>
+            <a href="./templates.html"><i class="mdi mdi-table-large"></i> Templates</a>
+            <a href="./library.html"><i class="mdi mdi-format-list-bulleted"></i> Cotent Library</a>
+            <a href="./catalog.html"><i class="mdi mdi-chart-bar"></i> Catalog</a>
+            <a href="./contact.html"><i class="mdi mdi-contacts"></i> Contacts</a>
+        </div>
+
+        <!-- partial -->
+
+        <div class="container-fluid page-body-wrapper">
+
+            <div class="col iconbar pt-1" style="position: fixed;">
+                <a href="./dashboard.html" data-toggle="tooltip" title="Dashboard" data-placement="right"><i class="mdi mdi-home"></i></a>
+                <a href="./document.html" data-toggle="tooltip" title="Documents" data-placement="right"><i class="mdi mdi-file"></i></a>
+                <a href="./templates.html" data-toggle="tooltip" title="Templates" data-placement="right"><i class="mdi mdi-table-large"></i></a>
+                <a href="./library.html" data-toggle="tooltip" title="Content Library" data-placement="right"><i class="mdi mdi-format-list-bulleted"></i></a>
+                <a href="./catalog.html" data-toggle="tooltip" title="Catalog" data-placement="right"><i class="mdi mdi-chart-bar"></i></a>
+                <a href="./contact.html" data-toggle="tooltip" title="Contacts" data-placement="right"><i class="mdi mdi-contacts"></i></a>
+            </div> 
+
+            <div class="main-panel" onclick="closeNav()">
+
+                <div class="row">
+
+                    <div class="col-md-12 pl-5">
+
+                        <div class="content-wrapper light">
+
+                            <div class="page-header">
+
+                                <h3 class="page-title"> <span class="page-title-icon bg-primary text-white mr-2"> <i class="mdi mdi-home"></i> </span> Settings </h3>
+
+
+
+                            </div>
+
+
+
+                            <div class="cardRow  row-cards row-deck">
+
+                                <div class="px-3 cardCol">
+
+                                    <div class="newcard" style="width: auto;">
+
+                                        <div>
+
+                                            <div>
+
+                                                <img class="card-img-top" src="./assets/images/interface/question.jpg" alt="Card image cap">
+
+                                                <div class="card-body">
+
+                                                    <a href="#" class="btn grnbtn btn-icon-text cardBtn" data-toggle="modal" data-target="#securityQuestion" data-whatever="@mdo"> <i class="mdi mdi-comment-question-outline"></i>Security Question</a>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="px-3 cardCol">
+
+                                    <div class="newcard">
+
+                                        <div>
+
+                                            <div>
+
+                                                <img class="card-img-top" src="./assets/images/interface/password.jpg" alt="Card image cap">
+
+                                                <div class="card-body">
+
+                                                    <a href="#" class="btn grnbtn btn-icon-text cardBtn" data-toggle="modal" data-target="#changePassword" data-whatever="@mdo"> <i class="mdi mdi-account-key btn-icon-prepend"></i>Change Password</a>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="px-3 cardCol">
+
+                                    <div class="newcard justify-content-sm-between">
+
+                                        <div>
+
+                                            <div>
+
+                                                <img class="card-img-top" src="./assets/images/interface/payment.jpg" alt="Card image cap">
+
+                                                <div class="card-body">
+
+                                                    <a href="#" class="btn grnbtn btn-icon-text cardBtn" data-toggle="modal" data-target="#payments" data-whatever="@mdo"> <i class="mdi mdi-account-key btn-icon-prepend"></i>Payment</a>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <footer class="footer pl-5">
+
+                            <div class="d-sm-flex justify-content-center justify-content-sm-between"> <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright &copy; 2020 <a href="#">Esignmax</a>. All rights reserved.</span> </div>
+        
+                        </footer></div>
+
+                </div>
+
+            </div>
+
+            <!-- content-wrapper ends -->
+
+            <!-- partial:partials/_footer.html -->
+
+
+
+            <!-- partial -->
+
+        </div>
+
+        <!-- main-panel ends -->
+
+    </div>
+
+    <!-- page-body-wrapper ends -->
+
+    </div>
+
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+
+    <!-- container-scroller -->
+
+    <script src="./assets/js/jquery-3.4.js"></script>
+
+
+
+    <!-- plugins:js -->
+
+    <script src="./assets/vendors/js/vendor.bundle.base.js"></script>
+
+    <!-- endinject -->
+
+    <!-- inject:js -->
+
+    <script src="./assets/js/off-canvas.js"></script>
+
+    <script src="./assets/js/hoverable-collapse.js"></script>
+
+    <script src="./assets/js/misc.js"></script>
+    
+    <script src="./assets/js/sidebar.js"></script>  
+
+    <script src="./assets/js/tooltip.js"></script>
+
+    <script src="./assets/js/newdocmodal.js"></script>
+
+    <!-- endinject -->
+
+
+
+
+
+    <!-- End custom js for this page -->
+
+    <script type="text/javascript" src="./assets/js/moment.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/select2.min.js"></script>
+
+    <!--<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>-->
+
+    <script src="./assets/js/sweetalert.min.js"></script>
+
+    <script>
+
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+
+
+<div class="modal fade  animated flipInX " tabindex="-1" id="changePassword" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="myModalLabel34">Change Password</h3>
+
+            </div>
+
+            <form name="PasswordForm" id="PasswordForm" action="/emax/Views/settings" method="post">
+
+                <div class="modal-body">
+
+                    <label>Old Password: </label>
+
+                    <div class="form-group position-relative has-icon-left">
+
+                        <input type="password" id="password" name="password" placeholder="Old Password" required="required" class="form-control custom-select-simple">
+
+
+
+                    </div>
+
+                    <label>New Password: </label>
+
+                    <div class="form-group position-relative has-icon-left">
+
+                        <input type="password" id="new_pass" name="new_pass" placeholder="New Password" required="required" class="form-control custom-select-simple">
+
+                    </div>
+
+                    <label>Verify New Password: </label>
+
+                    <div class="form-group position-relative has-icon-left">
+
+                        <input type="password" id="new_pass2" name="new_pass2" placeholder="New Password" required="required" class="form-control custom-select-simple ">
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="reset" class="btn greybtn btn-lg  " data-dismiss="modal" value="close"> <i class="mdi mdi-close-box btn-icon-prepend"></i>Close </button>
+
+                    <button type="submit" value="ChangePassword" name="ChangePass" class="btn grnbtn btn-lg "><i class="mdi mdi-account-key btn-icon-prepend"></i> Update</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal fade  animated flipInX " tabindex="-1" id="securityQuestion" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-xl" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="myModalLabel34">Choose security question</h3>
+
+            </div>
+
+            <form name="SecurityForm" id="SecurityForm" action="/emax/Views/settings" method="post">
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_1" name="Security_ID" value="1" required>
+
+                            <label for="Security_ID_1"> Whats is your mother''s maiden name ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_2" name="Security_ID" value="2" required>
+
+                            <label for="Security_ID_2"> what is the name of your favorite cousin ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_3" name="Security_ID" value="3" required>
+
+                            <label for="Security_ID_3"> who is your childhood hero ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_4" name="Security_ID" value="4" required>
+
+                            <label for="Security_ID_4"> what is your favorite color ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_5" name="Security_ID" value="5" required>
+
+                            <label for="Security_ID_5"> what is the name of you primary/secondary school ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_6" name="Security_ID" value="6" required>
+
+                            <label for="Security_ID_6"> what is the first name of your eldest nephew/niece ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_7" name="Security_ID" value="7" required>
+
+                            <label for="Security_ID_7"> when is your parent's wedding anniversary ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_8" name="Security_ID" value="8" required>
+
+                            <label for="Security_ID_8"> what was your favorite cartoon character during childhood ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_9" name="Security_ID" value="9" required>
+
+                            <label for="Security_ID_9"> what is the first name of your grand mother (mother's mother) ?</label>
+
+                        </div>
+
+
+
+                        <div class="radio col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="radio" id="Security_ID_10" name="Security_ID" value="10" required>
+
+                            <label for="Security_ID_10"> what was the name of your first pet ?</label>
+
+                        </div>
+
+                    </div>
+
+                    <label><br/><br/></label>
+
+                    <div class="form-group position-relative has-icon-left">
+
+                        <input type="text" id="SecurityAnswer" name="SecurityAnswer" Placeholder="Your answer" required="required" class="form-control custom-select-simple">
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="reset" class="btn greybtn btn-lg  " data-dismiss="modal" value="close"> <i class="mdi mdi-close-box btn-icon-prepend"></i>Close </button>
+
+                    <button type="submit" value="ChangeSecurity" name="ChangeSecurity" class="btn grnbtn btn-lg "><i class="mdi mdi-upload btn-icon-prepend"> </i> Update Security</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal fade  animated flipInX " id="payments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="myModalLabelPayment">Payment Settings</h3>
+
+            </div>
+
+            <div class="modal-body">
+
+                <button type="button" class="close" data-dismiss="modal" style="margin-top: -10px;"><i class="pci-cross pci-circle"></i></button>
+
+                <div class="bootbox-body">
+
+                    <p>Under Development! Will be activated soon.</p>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn greybtn" data-dismiss="modal">Cancel</button>
+
+                <button type="button" class="btn grnbtn" data-dismiss="modal">OK</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</html>
+
+<div class="modal fade  animated flipInX " id="NewDoc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="myModalLabelPayment">New Document</h3>
+
+            </div>
+
+            <div class="newDocModal" style=" display: block; background-color: #ebedf2;">
+
+                    <div class="tab" style="display: block; width: 100%; background-color: white;">
+                        <button class="tablinks" onclick="opentabs(event, 'Blocks')" id="defaultOpen">My Templates</button>
+                        <button class="tablinks" onclick="opentabs(event, 'Fields')">Public Templates</button>
+                        <button class="tablinks" onclick="opentabs(event, 'Tokens')">Uploads</button>
+                    </div>
+                    
+                    <div class="newdoccontent" id="Blocks"> 
+                        <a href="./createdoc.html">
+                            <div class="pt-5 mb-4 mt-3 blankpage" data-toggle="tooltip" title="Blank Document">
+                                <i class="mdi mdi-36px mdi-plus" style="color: rgb(31, 97, 51);"></i>
+                            </div>
+                        </a>
+                        <div class="newdocument">
+                            <a href="javascriptLvoid(0)"><i class="mdi mdi-file"></i> New</a>
+                            <a href="javascript:void(0);"><i class="mdi mdi-file"></i> Sample 02</a>
+                            <a href="javascript:void(0);"><i class="mdi mdi-file"></i> Sample 03</a>
+                        </div>
+                    </div>
+
+                    <div class="newdoccontent" id="Fields" style="display: none;">
+                        <p style="font-size: large;">Public Templates</p>
+                    </div>
+
+                    <div class="newdoccontent" id="Tokens" style="display: none;">
+                        <p style="font-size: large;">Uploads</p>
+                    </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn greybtn" data-dismiss="modal">Cancel</button>
+
+                <button type="button" class="btn grnbtn" data-dismiss="modal">OK</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
